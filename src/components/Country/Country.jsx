@@ -12,14 +12,16 @@ const Country = ({countryProps}) => {
     return (
 
         <div className="country">
-            <img src={flags.png} alt="flag of all country" />
+            <div className='img'>
+                <img src={flags.png} alt="flag of all country" />
+            </div>
             <div className='cardContent'>
                 <h3> Name: {name.common}  </h3>
                 <p> population: {population}  </p>
                 <p> area: {area}  </p>
-                <button onClick={handaleVisited}> {Isvisited ? 'Visited' : 'Going'} </button>
+                <button onClick={handaleVisited}> {Isvisited ? 'Visited' : 'click'} </button>
                 {
-                Isvisited ? 'I have visited already.' : 'I have not visit yet.'
+                    Isvisited ? 'I have visited already.' : 'I have not visit yet.'
                 }
             </div>
             
