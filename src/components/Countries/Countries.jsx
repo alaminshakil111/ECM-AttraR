@@ -14,6 +14,12 @@ const Countries = () => {
     return (
         <div>
             <h3> Countries: {countries.length} </h3>
+            <div>
+                <ul>
+                    <h4> Visited Countries: </h4>
+                    
+                </ul>
+            </div>
             <div className="CountriesGrid">
             {
                 countries.map((country)=> <Country key={country.cca3}  countryProps={country}></Country>)
