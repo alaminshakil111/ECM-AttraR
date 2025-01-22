@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import './Country.css'
 
-const Country = ({countryProps}) => {
+const Country = ({countryProps, handleVisitCountries}) => {
     const {name, flags, population,  area} = countryProps;
     console.log(countryProps)
+
     const [Isvisited, setVisited] = useState(false);
+
     function handaleVisited() {
         setVisited(!Isvisited);
     }
+
 
     return (
 
@@ -19,7 +22,8 @@ const Country = ({countryProps}) => {
                 <h3> Name: {name.common}  </h3>
                 <p> population: {population}  </p>
                 <p> area: {area}  </p>
-                <button>Mark visited</button>
+                <button onClick={()=>handleVisitCountries(countryProps)}> Mark visited </button>
+                <br />
                 <button onClick={handaleVisited}> {Isvisited ? 'Visited' : 'click'} </button>
                 {
                     Isvisited ? 'I have visited already.' : " I've not visit yet."
