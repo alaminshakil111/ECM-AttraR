@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -10,11 +11,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-blue-600 text-white shadow-lg">
-      <div className="max-w-[1300px] mx-auto px-4 lg:px-[1px]">
+    <nav className="bg-[#373A3C] text-white shadow-lg">
+      <div className="container px-2 sm:px-4">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="text-2xl font-bold">MySite</div>
+          <div className="flex items-center">
+            <a href="">sdsd</a>
+          </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
