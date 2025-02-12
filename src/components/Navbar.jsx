@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+// import { Menu, X } from "lucide-react";
+import { HiBars3 } from "react-icons/hi2";
+import { GiTireIronCross } from "react-icons/gi";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +17,7 @@ const Navbar = () => {
       <div className="container px-2 sm:px-4">
         <div className="flex justify-between items-center py-2">
           <div className="flex items-center">
-            <a href="#">sdsd</a>
+            <a href="#" className="underline underline-offset-2 text-blue-300"> Lorem ipsum dolor sit amet. </a>
           </div>
 
           {/* Desktop Menu */}
@@ -41,7 +44,8 @@ const Navbar = () => {
           <div className="md:hidden">
             <button onClick={toggleMenu}
               className="focus:outline-none text-white" >
-              <Menu size={28} />
+                <HiBars3 size={28}  />
+              {/* <Menu size={28} /> */}
               {/* {isOpen ? <Menu size={28} /> : <Menu size={28} /> } */}
             </button>
           </div>
@@ -55,8 +59,9 @@ const Navbar = () => {
           transition-transform duration-300 ease-in-out z-50` }>
         <button
           onClick={toggleMenu}
-          className="absolute top-4 right-4 text-white" >
-          <X size={28} />
+          className="absolute top-4 right-4 text-red-600 hover:text-red-300" >
+            <GiTireIronCross size={24} />
+          {/* <X size={28} /> */}
         </button>
         <div className="mt-16 px-4 space-y-4">
           <Link to="/" className="block px-3 py-2 rounded-md hover:bg-blue-700">
