@@ -1,16 +1,33 @@
 import logo from "../assets/images/logo.png";
+import { CiSearch } from "react-icons/ci";
+import { IoMdCart } from "react-icons/io";
+import { CiLogin } from "react-icons/ci";
+
+
 
 const TopNavbar = () => {
 
   return (
     <div className="topNavbar bg-[#231F20] py-1">
-        <div className=".container px-2 sm:px-4">
+        <div className="container px-2 sm:px-4">
             <div className="wrapper">
-                <div className="flex items-center">
-                    <div className="">
+                <div className="flex items-center justify-between py-1">
+                    <div className="logo">
                         <a href="/">
                             <img src={logo} alt="Logo" className="h-auto w-[100px]" />
                         </a>
+                    </div>
+                    <div className="topNavRight flex space-x-4 text-[#fff] text-xl">
+                        <div className="searchNav hover:text-blue-600">
+                            <CiSearch />
+                        </div>
+                        <div className="addCartNav hover:text-blue-600">
+                            <IoMdCart />
+                        </div>
+                        <div className="loginNav hover:text-blue-600">
+                            <CiLogin />
+                        </div>
+
                     </div>
                 </div>
             </div>

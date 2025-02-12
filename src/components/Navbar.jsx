@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -11,11 +10,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-[#373A3C] text-white shadow-lg">
+    <nav className="bg-[#373A3C] text-white shadow-lg relative">
       <div className="container px-2 sm:px-4">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center py-2">
           <div className="flex items-center">
-            <a href="">sdsd</a>
+            <a href="#">sdsd</a>
           </div>
 
           {/* Desktop Menu */}
@@ -27,56 +26,63 @@ const Navbar = () => {
               About
             </Link>
             <Link to="/Skills" className="hover:text-gray-200">
-            Skills
+              Skills
             </Link>
             <Link to="/Project" className="hover:text-gray-200">
-            Project
+              Project
             </Link>
             <Link to="/Contact" className="hover:text-gray-200">
-            Contact
+              Contact
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
+
           <div className="md:hidden">
-            <button
-              onClick={toggleMenu}
-              className="focus:outline-none text-white"
-            >
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
+            <button onClick={toggleMenu}
+              className="focus:outline-none text-white" >
+              <Menu size={28} />
+              {/* {isOpen ? <Menu size={28} /> : <Menu size={28} /> } */}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Sidebar Menu */}
+      <div className={
+        `fixed top-0 left-0 w-10/12 h-full bg-[#373A3C] shadow-lg transform
+         ${isOpen ? "translate-x-0" : "-translate-x-full"}
+          transition-transform duration-300 ease-in-out z-50` }>
+        <button
+          onClick={toggleMenu}
+          className="absolute top-4 right-4 text-white" >
+          <X size={28} />
+        </button>
+        <div className="mt-16 px-4 space-y-4">
+          <Link to="/" className="block px-3 py-2 rounded-md hover:bg-blue-700">
+            Home
+          </Link>
+          <Link to="/AboutMe" className="block px-3 py-2 rounded-md hover:bg-blue-700">
+            About
+          </Link>
+          <Link to="/Skills" className="block px-3 py-2 rounded-md hover:bg-blue-700">
+            Skills
+          </Link>
+          <Link to="/Project" className="block px-3 py-2 rounded-md hover:bg-blue-700">
+            Project
+          </Link>
+          <Link to="/Contact" className="block px-3 py-2 rounded-md hover:bg-blue-700">
+            Contact
+          </Link>
+        </div>
+      </div>
+
+      {/* Overlay when menu is open */}
       {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            <Link to="/" className="block px-3 py-2 rounded-md hover:bg-blue-700">
-              Home
-            </Link>
-            <Link
-              to="/AboutMe"
-              className="block px-3 py-2 rounded-md hover:bg-blue-700">
-              About
-            </Link>
-            <Link
-              to="/Skills"
-              className="block px-3 py-2 rounded-md hover:bg-blue-700">
-              Skills
-            </Link>
-            <Link
-              to="/Project"
-              className="block px-3 py-2 rounded-md hover:bg-blue-700">
-              Project
-            </Link>
-            <Link
-              to="/Contact"
-              className="block px-3 py-2 rounded-md hover:bg-blue-700">
-              Contact
-            </Link>
-          </div>
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          onClick={toggleMenu}>
+
         </div>
       )}
     </nav>
