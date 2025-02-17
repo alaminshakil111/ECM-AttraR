@@ -25,12 +25,12 @@ const TopNavbar = () => {
       <div className="container px-2 sm:px-4">
         <div className="wrapper">
           <div className="flex items-center justify-between py-1">
-            <div className="logo">
+            <div className="logo w-5/12">
               <a href="/">
                 <img src={logo} alt="Logo" className="h-auto w-[100px]" />
               </a>
             </div>
-            <div className="topNavRight flex space-x-4 text-[#fff] text-xl">
+            <div className="topNavRight w-7/12 flex justify-end items-center space-x-4 text-[#fff] text-xl">
               <div className="searchNav hover:text-blue-600 flex items-center">
                 {(isSearch || windowWidth >= 768) && (
                   <input

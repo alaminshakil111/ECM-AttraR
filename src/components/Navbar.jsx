@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 // import { Menu, X } from "lucide-react";
 import { HiBars3 } from "react-icons/hi2";
 import { GiTireIronCross } from "react-icons/gi";
+import logo from "../assets/images/logo.png";
+
 
 
 const Navbar = () => {
@@ -16,9 +18,7 @@ const Navbar = () => {
     <nav className="bg-[#373A3C] text-white shadow-lg relative">
       <div className="container px-2 sm:px-4">
         <div className="flex justify-between items-center py-2">
-          <div className="flex items-center">
-            <a href="#" className="underline underline-offset-2 text-blue-300"> Lorem ipsum dolor sit amet. </a>
-          </div>
+          
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
@@ -49,20 +49,28 @@ const Navbar = () => {
               {/* {isOpen ? <Menu size={28} /> : <Menu size={28} /> } */}
             </button>
           </div>
+          <div className="flex items-center">
+            <a href="#" className="underline underline-offset-2 text-blue-300"> Lorem ipsum dolor sit amet. </a>
+          </div>
         </div>
       </div>
 
       {/* Mobile Sidebar Menu */}
       <div className={
-        `fixed top-0 left-0 w-10/12 h-full bg-[#373A3C] shadow-lg transform
+        `fixed top-0 left-0 w-10/12 h-full bg-[#373A3C] overflow-y-auto shadow-lg rounded-tr-[25px] transform
          ${isOpen ? "translate-x-0" : "-translate-x-full"}
           transition-transform duration-300 ease-in-out z-50` }>
-        <button
-          onClick={toggleMenu}
-          className="absolute top-4 right-4 text-red-600 hover:text-red-300" >
-            <GiTireIronCross size={24} />
-          {/* <X size={28} /> */}
-        </button>
+          <div className="sideBarCrossSec flex justify-between p-4">
+            <a href="/">
+              <img src={logo} alt="Logo" className="h-auto w-[100px]" />
+            </a>
+            <button
+              onClick={toggleMenu}
+              className=" text-red-600 hover:text-red-300" >
+                <GiTireIronCross size={24} />
+              {/* <X size={28} /> */}
+            </button>
+          </div>
         <div className="mt-16 px-4 space-y-4">
           <Link to="/" className="block px-3 py-2 rounded-md hover:bg-blue-700">
             Home
