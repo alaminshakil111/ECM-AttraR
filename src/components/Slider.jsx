@@ -23,19 +23,19 @@ const Slider = () => {
                     <div className="mobileImg hidden lg:block ">
                         <img src={mainSlider3} alt="mainSlider3" />
                     </div>
-                    <div className="sliderCatagoryBtn lg:flex">
-                        <div className="directbtnLeft flex justify-between items-center text-center w-full lg:w-[60%]">
-                            <Link to="/" className="hover:text-white px-[22px] py-3 text-[11px] sm:text-[14px] block w-full ">SHOP NOW </Link>
+                    <div className="sliderCatagoryBtn flex flex-col lg:flex-row">
+                        <div className="directbtnLeft flex justify-around lg:w-[60%]">
+                            <Link to="/" className="hover:text-white px-[22px] py-3 text-[11px] sm:text-[14px] w-full flex justify-center items-center text-center ">SHOP NOW </Link>
                             
-                            <Link to="/" className="hover:text-white px-[22px] py-3 text-[11px] sm:text-[14px] block w-full "> MEN </Link>
+                            <Link to="/" className="hover:text-white px-[22px] py-3 text-[11px] sm:text-[14px] w-full flex justify-center items-center text-center "> MEN </Link>
                             
-                            <Link to="/" className="hover:text-white px-[22px] py-3 text-[11px] sm:text-[14px] block w-full "> WOMEN </Link>
+                            <Link to="/" className="hover:text-white px-[22px] py-3 text-[11px] sm:text-[14px] w-full flex justify-center items-center text-center "> WOMEN </Link>
                             
-                            <Link to="/" className="hover:text-white px-[22px] py-3 text-[11px] sm:text-[14px] block w-full "> KIDS </Link>
+                            <Link to="/" className="hover:text-white px-[22px] py-3 text-[11px] sm:text-[14px] w-full flex justify-center items-center text-center "> KIDS </Link>
 
                         </div>
-                        <div className="directBtnRight bg-[#ededed] lg:bg-[#fff]  mt-1 w-full lg:w-[40%]">
-                            <div className="flex justify-between items-center px-2 py-2 sm:py-4 lg:py-0 max-w-[260px] sm:max-w-[415px] m-auto lg:max-w-[inherit]">
+                        <div className="directBtnRight bg-[#ededed] mt-1 lg:mt-0 lg:w-[40%] lg:flex items-center ">
+                            <div className="flex justify-between items-center px-2 py-2 sm:py-4 lg:py-0 max-w-[260px] sm:max-w-[415px] m-auto lg:m-0 lg:max-w-full">
                                 <p className="text-xs md:text-[14px] px-2" > GET <span className="text-[16px] md:text-[17px] font-bold ">5%</span> OFF ON APP </p>
                                 <div className="discountAppForMobile flex space-x-1 ">
                                     <a href="/"><img className="sm:hidden w-12" src= {playstore_square} alt="playstore-square" /></a>

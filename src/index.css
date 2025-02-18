@@ -38,7 +38,7 @@ body{
     }
 }
 
-.directbtnLeft a:nth-child(even) {
+.directbtnLeft a:nth-child(odd) {
     background-color: #ededed;
 }
 .directbtnLeft a:hover{
