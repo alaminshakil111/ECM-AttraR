@@ -9,7 +9,7 @@ body{
 }
 
 .container{
-    max-width: 1300px;
+    max-width: 1380px;
     width: 100%;
     margin: 0 auto;
 }
@@ -27,15 +27,22 @@ body{
         position: absolute;
         width: 98%;
         left: 50%;
-        top: 39%;
+        top: 10%;
         transform: translateX(-50%);
         z-index: 9;
         border-radius: 5px;
-        height: 33px;
+        height: 40px;
         font-size: 15px;
         outline: none;
         padding: 4px 7px;
     }
+}
+
+.directbtnLeft a:nth-child(even) {
+    background-color: #ededed;
+}
+.directbtnLeft a:hover{
+    background-color: #000;
 }
 @media screen and (min-width:768px) {
     .searchNav{

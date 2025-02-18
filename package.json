@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "flowbite": "^3.1.2",
+    "flowbite-react": "^0.10.2",
     "lucide-react": "^0.475.0",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",
