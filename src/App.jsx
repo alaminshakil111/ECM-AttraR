@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <TopNavbar></TopNavbar>
+      <TopNavbar />
       <Router>
         <Navbar />
         <Routes>
