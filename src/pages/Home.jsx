@@ -10,11 +10,21 @@ import fabrilifeappstore from "../assets/images/fabrilifeappstore.svg";
 
 import { Link } from "react-router-dom";
 import Slider from "../components/Slider";
+import TopNavbar from "../components/TopNavbar";
+import Navbar from "../components/Navbar";
+
+
 
 const Home = () => {
     return (
         <>
+            <div>
+                <TopNavbar />
+                <Navbar />
+            </div>
+            
             <Slider></Slider>
+
             <div className="container">
                 <div className="wrapper">
                 <div className="sliderCatagoryBtn flex flex-col lg:flex-row">
