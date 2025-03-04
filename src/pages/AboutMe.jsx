@@ -1,11 +1,17 @@
-import React from 'react';
+import { useState, useEffect } from "react";
 
 const AboutMe = () => {
-    return (
-        <div>
-            <h4>AboutMe</h4>
-        </div>
-    );
+    const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount(prevCount => prevCount + 1);
+    }, 1000);
+
+    return () => clearInterval(interval); // Cleanup function
+  }, []);
+
+  return <h1>Counter: {count}</h1>;
 };
 
 export default AboutMe;

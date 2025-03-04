@@ -59,7 +59,7 @@ const Navbar = () => {
       <div className={
         `fixed top-0 left-0 w-10/12 h-full bg-[#373A3C] overflow-y-auto shadow-lg rounded-tr-[25px] transform
          ${isOpen ? "translate-x-0" : "-translate-x-full"}
-          transition-transform duration-300 ease-in-out z-50` }>
+          transition-transform duration-600 ease-in z-50` }>
           <div className="sideBarCrossSec flex justify-between p-4">
             <a href="/">
               <img src={logo} alt="Logo" className="h-auto w-[100px]" />

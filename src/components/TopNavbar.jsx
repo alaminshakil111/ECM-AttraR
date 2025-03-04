@@ -5,7 +5,6 @@ import { IoMdCart } from "react-icons/io";
 import { CiLogin } from "react-icons/ci";
 
 
-
 const TopNavbar = () => {
   const [isSearch, setSearch] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
