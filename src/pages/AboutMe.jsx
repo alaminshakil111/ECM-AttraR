@@ -1,14 +1,22 @@
 import { useState, useEffect } from "react";
 
 const AboutMe = () => {
-    const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
+    console.log(`🟢 Creating new setInterval at count: ${count}`);
+    
     const interval = setInterval(() => {
-      setCount(prevCount => prevCount + 1);
+      setCount(prev => {
+        console.log(`⏳ Interval Running! ID: ${interval}, Count: ${prev + 1}`);
+        return prev + 1;
+      });
     }, 1000);
 
-    return () => clearInterval(interval); // Cleanup function
+    // return () => {
+    //   console.log(`🔴 Clearing Interval! ID: ${interval}, Last Count: ${count}`);
+    //   clearInterval(interval);
+    // };
   }, []);
 
   return <h1>Counter: {count}</h1>;
