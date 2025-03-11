@@ -4,7 +4,6 @@ import { CiSearch } from "react-icons/ci";
 import { IoMdCart } from "react-icons/io";
 import { CiLogin } from "react-icons/ci";
 
-
 const TopNavbar = () => {
   const [isLogin, setLogin] = useState(false);
   const [isSearch, setSearch] = useState(false);

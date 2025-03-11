@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from 'react';
-import Section from './components/Section';
 
 
 import Home from "./pages/Home";
@@ -24,10 +23,6 @@ function App() {
           <Route path="/Contact" element={<Contact />} />
         </Routes>
       </Router>
-      <div className="ItemsBoxApp">
-        <h1>Multiple Boxes Section</h1>
-        <Section />
-      </div>
 
 
 
