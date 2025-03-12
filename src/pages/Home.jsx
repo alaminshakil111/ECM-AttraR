@@ -8,7 +8,7 @@ import appstore_square from "../assets/images/appstore-square.png";
 import playstorebadge from "../assets/images/playstorebadge.svg";
 import fabrilifeappstore from "../assets/images/fabrilifeappstore.svg";
 
-import Section from '../components/Section';
+import Section from '../components/SectionItemBox';
 import { Link } from "react-router-dom";
 import Slider from "../components/Slider";
 import TopNavbar from "../components/TopNavbar";
@@ -78,7 +78,6 @@ const Home = () => {
             <div className="container">
                 <div className="wrapper">
                     <div className="ItemsBoxApp">
-                        <h1>Multiple Boxes Section</h1>
                         <Section />
                     </div>
                 </div>
