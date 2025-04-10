@@ -19,8 +19,8 @@ const Navbar = () => {
       <div className="container px-2 sm:px-4">
         <div className="flex justify-between items-center py-2">
           
-
           {/* Desktop Menu */}
+
           <div className="hidden md:flex space-x-6">
             <Link to="/" className="hover:text-gray-200">
               Home

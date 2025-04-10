@@ -2,18 +2,18 @@
 // import TopNavbar from "../components/TopNavbar";
 import { FaArrowCircleRight } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
-import { Button, Tooltip } from "flowbite-react";
+// import { Button, Tooltip } from "flowbite-react";
 
 import playstore_square from "../assets/images/playstore-square.png";
 import appstore_square from "../assets/images/appstore-square.png";
 import playstorebadge from "../assets/images/playstorebadge.svg";
 import fabrilifeappstore from "../assets/images/fabrilifeappstore.svg";
 
-import Section from '../components/SectionItemBox';
+import Section from '../components/SectionImgcard';
 import { Link } from "react-router-dom";
 import Slider from "../components/Slider";
-import TopNavbar from "../components/TopNavbar";
-import Navbar from "../components/Navbar";
+// import TopNavbar from "../components/TopNavbar";
+// import Navbar from "../components/Navbar";
 
 
 
@@ -21,15 +21,14 @@ const Home = () => {
     return (
         <>
             {/* NAVBAR */}
-            <div>
+            {/* <div>
                 <TopNavbar />
                 <Navbar />
-            </div>
+            </div> */}
 
             {/* SLIDER BANNER */}
             
             <Slider></Slider>
-
             
             <div className="container">
                 <div className="wrapper">
@@ -94,9 +93,9 @@ const Home = () => {
 
                 </div>
             </div>
-            <Tooltip content="Tooltip content">
-      <Button>Default tooltip</Button>
-    </Tooltip>
+            {/* <Tooltip content="Tooltip content">
+                <Button>Default tooltip</Button>
+            </Tooltip> */}
 
 
 
