@@ -2,34 +2,28 @@
 // import TopNavbar from "../components/TopNavbar";
 import { FaArrowCircleRight } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
-import { Button, Tooltip } from "flowbite-react";
+// import { Button, Tooltip } from "flowbite-react";
 
 import playstore_square from "../assets/images/playstore-square.png";
 import appstore_square from "../assets/images/appstore-square.png";
 import playstorebadge from "../assets/images/playstorebadge.svg";
 import fabrilifeappstore from "../assets/images/fabrilifeappstore.svg";
 
-import Section from '../components/SectionItemBox';
+import NewPriceItemCard from '../components/NewPriceItemCard';
+import NewNameItemSec from '../components/NewNameItemSec';
 import { Link } from "react-router-dom";
 import Slider from "../components/Slider";
-import TopNavbar from "../components/TopNavbar";
-import Navbar from "../components/Navbar";
+// import TopNavbar from "../components/TopNavbar";
+// import Navbar from "../components/Navbar";
 
 
 
 const Home = () => {
     return (
         <>
-            {/* NAVBAR */}
-            <div>
-                <TopNavbar />
-                <Navbar />
-            </div>
-
             {/* SLIDER BANNER */}
             
             <Slider></Slider>
-
             
             <div className="container">
                 <div className="wrapper">
@@ -75,28 +69,29 @@ const Home = () => {
             </div>
             <div className="container px-2 sm:px-0">
                 <div className="wrapper">
-                    <div className="sectionHeading text-center bg-red-400 py-2 mt-1 mb-5">
+                    <div className="sectionHeading text-center bg-red-400 py-2 mt-1 md:mt-3 mb-5 rounded ">
                         <h3> NEW ARRIVAL </h3>
                         <a href="/" className="underline text-center flex justify-center items-center text-"> visit store <IoIosArrowForward /> </a>
                     </div>
                     <div className="ItemsBoxApp">
-                        <Section />
+                        <NewPriceItemCard />
                     </div>
                 </div>
             </div>
 
             <div className="container px-2 sm:px-0">
                 <div className="wrapper">
-                    <div className="sectionHeading text-center bg-red-400 py-2 mt-1 mb-5">
+                    <div className="sectionHeading text-center bg-red-400 py-2 mt-1 md:mt-3 mb-5 rounded ">
                         <h3> Mens Full Sleeve T-shirt </h3>
                         <a href="/" className="underline text-center flex justify-center items-center text-"> visit store <IoIosArrowForward /> </a>
+                    </div>
+                    <div className="ItemsBoxApp">
+                        <NewNameItemSec />
                     </div>
 
                 </div>
             </div>
-            <Tooltip content="Tooltip content">
-      <Button>Default tooltip</Button>
-    </Tooltip>
+            
 
 
 

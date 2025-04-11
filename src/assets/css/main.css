@@ -50,18 +50,23 @@ img {
     width: 315px;
   }
 }
+@media screen and (min-width: 1300px) {
+  .searchNav {
+    width: 70%;
+  }
+}
 .searchNav input[type=text] {
   position: absolute;
   width: 98%;
   left: 50%;
-  top: 7%;
+  top: 115%;
   transform: translateX(-50%);
-  z-index: 9;
   border-radius: 5px;
   height: 40px;
   font-size: 15px;
   outline: none;
   padding: 4px 7px;
+  background: #fff;
 }
 @media screen and (min-width: 768px) {
   .searchNav input[type=text] {
@@ -78,11 +83,10 @@ img {
   }
 }
 @media screen and (min-width: 768px) {
-  .searchNav .cursor-pointer {
+  .searchNav .searchBtn {
     cursor: pointer;
     position: absolute;
     right: 0;
-    z-index: 9;
     background: purple;
     height: 100%;
     padding: 6px;
@@ -90,6 +94,12 @@ img {
     border-bottom-right-radius: 5px;
     color: #fff;
   }
+}
+
+.itemLiMenu {
+  overflow: auto;
+  height: 100vh;
+  padding-bottom: 97px;
 }
 
 .directbtnLeft a:nth-child(odd) {
