@@ -11,6 +11,8 @@ import fabrilifeappstore from "../assets/images/fabrilifeappstore.svg";
 
 import NewPriceItemCard from '../components/NewPriceItemCard';
 import NewNameItemSec from '../components/NewNameItemSec';
+import FrontImgCardSec from '../components/FrontImgCardSec'
+
 import { Link } from "react-router-dom";
 import Slider from "../components/Slider";
 // import TopNavbar from "../components/TopNavbar";
@@ -64,7 +66,6 @@ const Home = () => {
                             </div>
                         </Link>
                     </div>
-                    
                 </div>
             </div>
             <div className="container px-2 sm:px-0">
@@ -89,6 +90,14 @@ const Home = () => {
                         <NewNameItemSec />
                     </div>
 
+                </div>
+            </div>
+
+            <div className="container justify-center px-2 sm:px-0">
+                <div className="wrapper">
+                    <div className="FrontImgBoxApp mt-6 md:mt-9">
+                        <FrontImgCardSec />
+                    </div>                 
                 </div>
             </div>
             
