@@ -99,7 +99,7 @@ const ProductsCatagory = () => {
       </button>
 
       {/* Sidebar */}
-      <div className={clsx("fixed lg:static top-0 left-0 h-full lg:h-auto w-85 lg:w-auto bg-white shadow-lg transition-transform duration-300 z-40",
+      <div className={clsx("fixed lg:static top-0 left-0 h-full lg:h-auto w-85 lg:w-auto bg-white lg:bg-transparent shadow-lg transition-transform duration-300 z-40",
           {
             "-translate-x-full": !isOpen,
             "translate-x-0": isOpen,

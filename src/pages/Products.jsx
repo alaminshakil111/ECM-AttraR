@@ -3,6 +3,7 @@ import React from 'react'
 import { FaStar, FaShoppingCart } from "react-icons/fa";
 
 import ProductsCatagory from '../components/ProductsCatagorySelection';
+import Breadcrumb from '@/components/ui/Breadcumbs';
 
 import indeximg1 from '../assets/images/indeximg1.jpg';
 import indeximg2 from '../assets/images/indeximg2.jpg';
@@ -71,10 +72,18 @@ const Products = () => {
     },
   ];
 
+  const breadcrumbPaths = [
+    // { label: "Home", href: "/Home" },
+    { label: "Products", href: "#" },
+  ];
+
   return (
     <div className='ProductCatagorySelectSec'>
       <div className='container px-2 sm:px-0'>
         <div className='wrapper'>
+          <div className="p-4">
+            <Breadcrumb paths={breadcrumbPaths} />
+          </div>
           <div className='CatagoryProductsGrid lg:flex '>
             <div className=' lg:w-2/6 xl:w-2/7 '>
               <ProductsCatagory />
@@ -82,47 +91,49 @@ const Products = () => {
             
             <div className='ProductsAll lg:w-4/6 xl:w-5/7 '>
               <div className="w-full px-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
                   {boxes.map((product) => (
                     <div key={product.id}
                       className="bg-white shadow-md rounded-lg overflow-hidden flex flex-col justify-between" >
                       <a href={product.link} className="block">
-                        <div className="p-4">
+                        <div className="p-4 ">
                           <div className="w-full h-48 overflow-hidden mb-4">
                             <img
                               src={product.image}
                               alt="product"
                               className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" />
                           </div>
-                          <div className="text-sm text-gray-700 mb-2 font-medium">
-                            {product.title}
-                          </div>
-                          <div className="flex items-center text-lg font-semibold text-green-600">
-                            <span>৳</span>
-                            <span>{product.currentPrice}</span>
-                          </div>
-                          <div className="flex items-center gap-2 mt-1">
-                            <div className="line-through text-gray-500 text-sm">
-                              <span>৳{product.originalPrice}</span>
+                          <div className='productsContent'>
+                            <div className="text-sm text-gray-700 mb-2 font-medium">
+                              {product.title}
                             </div>
-                            <span className="bg-red-100 text-red-600 px-2 py-0.5 text-xs rounded">
-                              {product.discount}
-                            </span>
-                          </div>
-                          <div className="flex items-center mt-2 text-yellow-500 text-sm">
-                            {[...Array(product.rating)].map((_, index) => (
-                              <FaStar key={index} className="mr-1" />
-                            ))}
-                            <span className="text-gray-600 ml-1">
-                              ({product.reviews})
-                            </span>
+                            <div className="flex items-center text-lg font-semibold text-green-600">
+                              <span>৳</span>
+                              <span>{product.currentPrice}</span>
+                            </div>
+                            <div className="flex items-center gap-2 mt-1">
+                              <div className="line-through text-gray-500 text-sm">
+                                <span>৳{product.originalPrice}</span>
+                              </div>
+                              <span className="bg-red-100 text-red-600 px-2 py-0.5 text-xs rounded">
+                                {product.discount}
+                              </span>
+                            </div>
+                            <div className="flex items-center mt-2 text-yellow-500 text-sm">
+                              {[...Array(product.rating)].map((_, index) => (
+                                <FaStar key={index} className="mr-1" />
+                              ))}
+                              <span className="text-gray-600 ml-1">
+                                ({product.reviews})
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </a>
                       <div className="px-4 pb-4">
                         <button
                           type="button"
-                          className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg flex justify-center items-center gap-2 transition-colors duration-300"
+                          className="w-full bg-blue-600 hover:bg-blue-700 text-white py-1 rounded-sm flex justify-center items-center gap-2 transition-colors duration-300 cursor-pointer "
                         >
                           <FaShoppingCart />
                           Buy Now
