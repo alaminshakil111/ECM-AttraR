@@ -21,6 +21,8 @@ import JacketSec from '../components/JacketSec';
 import ProductExplain from '../components/FeatureProduction';
 import HelpContactSec from '../components/HelpContactSec';
 import Footermain from '../components/Footermain';
+import SubFooterSec from '../components/subFooter';
+
 
 
 import { Link } from "react-router-dom";
@@ -169,6 +171,15 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
+            <div className="subFooterBgColor bg-white text-black ">
+                <div className="container px-2 sm:px-0 ">
+                    <div className="wrapper">
+                        <SubFooterSec />
+                    </div>
+                </div>
+            </div>
+
 
 
 

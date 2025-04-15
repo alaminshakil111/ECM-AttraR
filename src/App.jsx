@@ -16,6 +16,7 @@ import CreateWebsite from "./pages/CreatWebsite";
 import DevelopWebsite from "./pages/DevelopWebsite";
 import HiringDeveloper from "./pages/HiringDeveloper";
 import Testimonials from "./pages/Testimonials";
+import ProductsSec from "./pages/Products";
 import NotFound from "./pages/NotFound";
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         <Route path="/services/develop-website" element={<DevelopWebsite />} />
         <Route path="/services/hiring-developer" element={<HiringDeveloper />} />
         <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/Products" element={<ProductsSec />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
