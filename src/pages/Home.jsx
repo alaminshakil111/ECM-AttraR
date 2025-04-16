@@ -19,9 +19,9 @@ import FullSleeveShirt from '../components/FullSleeveShirt'
 import JacketSec from '../components/JacketSec';
 // import MultipleItemSlider from '../components/MultipleItemSlider';
 import ProductExplain from '../components/FeatureProduction';
-import HelpContactSec from '../components/HelpContactSec';
-import Footermain from '../components/Footermain';
-import SubFooterSec from '../components/subFooter';
+// import HelpContactSec from '../components/HelpContactSec';
+// import Footermain from '../components/Footermain';
+// import SubFooterSec from '../components/subFooter';
 
 
 
@@ -156,15 +156,15 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="OuterContainerExplain bg-[#231F20] text-white ">
+            {/* <div className="OuterContainerExplain bg-[#231F20] text-white ">
                 <div className="container px-2 sm:px-0">
                     <div className="wrapper ">
                         <HelpContactSec />
                     </div>
                 </div>
-            </div>
+            </div> */}
 
-            <div className="FooterBgColor bg-black text-white ">
+            {/* <div className="FooterBgColor bg-black text-white ">
                 <div className="container px-2 sm:px-0 ">
                     <div className="wrapper">
                         <Footermain />
@@ -178,7 +178,7 @@ const Home = () => {
                         <SubFooterSec />
                     </div>
                 </div>
-            </div>
+            </div> */}
 
 
 

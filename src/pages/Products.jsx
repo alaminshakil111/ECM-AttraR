@@ -4,6 +4,9 @@ import { FaStar, FaShoppingCart } from "react-icons/fa";
 
 import ProductsCatagory from '../components/ProductsCatagorySelection';
 import Breadcrumb from '@/components/ui/Breadcumbs';
+// import HelpContactSec from '../components/HelpContactSec';
+import SideCart from '@/components/SideCart';
+
 
 import indeximg1 from '../assets/images/indeximg1.jpg';
 import indeximg2 from '../assets/images/indeximg2.jpg';
@@ -95,7 +98,7 @@ const Products = () => {
                   {boxes.map((product) => (
                     <div key={product.id}
                       className="bg-white shadow-md rounded-lg overflow-hidden flex flex-col justify-between" >
-                      <a href={product.link} className="block">
+                      <a href="/ProductDetails" className="block">
                         <div className="p-4 ">
                           <div className="w-full h-48 overflow-hidden mb-4">
                             <img
@@ -152,6 +155,11 @@ const Products = () => {
         </div>
 
       </div>
+
+      <SideCart />
+      
+
+      
       
       
 
