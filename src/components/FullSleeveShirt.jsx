@@ -42,7 +42,7 @@ const FullSleeveShirt = () => {
               <div className='mt-2 text-center text-black absolute top-[-19px] left-1/2 transform -translate-x-1/2 -skew-x-23 bg-white/80 text-[12px] px-2 rounded-bl-[4px]
                rounded-br-[4px] '>
                 <p>{box.price} </p>
-                <p>{box.oldPrice} </p>
+                <p className='line-through text-gray-500 ' >{box.oldPrice} </p>
               </div>
             </a>
           </div>

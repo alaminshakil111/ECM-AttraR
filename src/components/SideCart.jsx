@@ -93,7 +93,7 @@ const SideCart = () => {
             <span>৳610</span>
           </div>
           <button className="w-1/2 bg-green-800 text-white text-sm px-4 py-2 flex items-center justify-center gap-1 cursor-pointer ">
-            Checkout <FaArrowRight />
+            <a href="/CheckOut" className=' flex items-center gap-1 ' > Checkout <FaArrowRight /> </a>
           </button>
         </div>
       </div>

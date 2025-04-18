@@ -1,11 +1,16 @@
 
 import React, { useState } from "react";
 import indeximg1 from "../assets/images/indeximg1.jpg";
+import indeximg2 from "../assets/images/indeximg2.jpg";
+import indeximg3 from "../assets/images/indeximg3.jpg";
 
 import Breadcrumb from '@/components/ui/Breadcumbs';
 
+import ReactImageMagnify from 'react-image-magnify';
 
 function ProductDetailsSec() {
+    const images = [indeximg1, indeximg2, indeximg3];
+    const [selectedImage, setSelectedImage] = useState(images[0]);
     const breadcrumbPaths = [
         { label: "Products", href: "/Products" },
         { label: "ProductDetails", href: "/ProductDetailsSec" },
@@ -55,16 +60,52 @@ function ProductDetailsSec() {
     
   return (
     <div className='ProductsDetailsSection'>
-        <div className='container'>
+        <div className='container px-2 sm:px-0'>
             <div className='wrapper'>
                 <div className="p-4">
                     <Breadcrumb paths={breadcrumbPaths} />
                 </div>
-                <div className="grid grid-cols-1 xl:grid-cols-12 gap-4">
+                <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
                 {/* Product Image & Frequently Bought */}
-                <div className="xl:col-span-6">
-                    <div className="relative " id="imageMagnifyer">
-                        <img src={product.image} alt="Product" className="w-full object-cover rounded" />
+                <div className="xl:w-full">
+                <div className="xl:w-full xl:h-auto" id="imageMagnifyer">
+                    {/* Zoom Image */}
+                    <div className="w-full h-auto max-w-xl mx-auto border rounded">
+                    <ReactImageMagnify
+                        {...{
+                        smallImage: {
+                            alt: 'Product Image',
+                            isFluidWidth: true,
+                            src: selectedImage,
+                            width: 120,
+                            height: 160
+                        },
+                        largeImage: {
+                            src: selectedImage,
+                            width: 1200,
+                            height: 1500,
+                        },
+                        enlargedImagePosition : "cover",
+                        // enlargedImageContainerStyle: { zIndex: 20 },
+                        // imageClassName: "object-contain w-full",
+                        }}
+                    />
+                    </div>
+
+                    {/* Thumbnail Images */}
+                    <div className="flex gap-2 mt-4 justify-center">
+                    {images.map((img, index) => (
+                        <img
+                        key={index}
+                        src={img}
+                        alt={`Thumbnail ${index}`}
+                        onClick={() => setSelectedImage(img)}
+                        className={`w-20 h-20 object-cover border cursor-pointer rounded ${
+                            selectedImage === img ? "ring-2 ring-blue-500" : "hover:ring-2 hover:ring-gray-400"
+                        }`}
+                        />
+                    ))}
+                    </div>
                     </div>
 
                     <div className="hidden sm:block mt-4">
@@ -91,7 +132,8 @@ function ProductDetailsSec() {
                 </div>
 
                 {/* Product Info */}
-                <div className="xl:col-span-6 space-y-5">
+
+                <div className="xl:w-full space-y-5">
                     <h4 className="text-2xl font-semibold">{product.title}</h4>
                     <div className="text-xl">
                         <span className="line-through text-gray-400 mr-2">৳ {product.oldPrice}</span>
@@ -145,42 +187,42 @@ function ProductDetailsSec() {
 
                     {/* Specification */}
                     <div>
-                    <strong>Detailed Specification</strong>
-                    <ul className="list-disc pl-5 text-sm mt-2">
-                        {product.specifications.map((spec, i) => (
-                        <li key={i}>{spec}</li>
-                        ))}
-                    </ul>
+                        <strong>Detailed Specification</strong>
+                        <ul className="list-disc pl-5 text-sm mt-2">
+                            {product.specifications.map((spec, i) => (
+                            <li key={i}>{spec}</li>
+                            ))}
+                        </ul>
                     </div>
 
                     {/* Size Chart */}
                     <div>
                     <strong>Size chart - In inches (Expected Deviation &lt; 3%)</strong>
-                    <table className="w-full mt-2 text-sm border border-gray-300">
-                        <thead>
-                        <tr className="bg-gray-100">
-                            <th className="border p-2">Size</th>
-                            <th className="border p-2">Chest</th>
-                            <th className="border p-2">Length</th>
-                            <th className="border p-2">Sleeve</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {product.sizeChart.map((row, i) => (
-                            <tr key={i}>
-                            <td className="border p-2">{row.size}</td>
-                            <td className="border p-2">{row.chest}</td>
-                            <td className="border p-2">{row.length}</td>
-                            <td className="border p-2">{row.sleeve}</td>
+                        <table className="w-full mt-2 text-sm border border-gray-300">
+                            <thead>
+                            <tr className="bg-gray-100">
+                                <th className="border p-2">Size</th>
+                                <th className="border p-2">Chest</th>
+                                <th className="border p-2">Length</th>
+                                <th className="border p-2">Sleeve</th>
                             </tr>
-                        ))}
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                            {product.sizeChart.map((row, i) => (
+                                <tr key={i}>
+                                    <td className="border p-2"> {row.size} </td>
+                                    <td className="border p-2"> {row.chest} </td>
+                                    <td className="border p-2"> {row.length} </td>
+                                    <td className="border p-2"> {row.sleeve} </td>
+                                </tr>
+                            ))}
+                            </tbody>
+                        </table>
                     </div>
 
                     {/* Mobile Frequently Bought */}
                     <div className="block sm:hidden mt-6">
-                    <h5 className="text-lg font-semibold mb-2">Frequently Bought Together</h5>
+                    <h5 className="text-lg font-semibold mb-2"> Frequently Bought Together </h5>
                     <div className="flex space-x-4 overflow-x-auto">
                         {product.frequentlyBought.map((item, i) => (
                         <a key={i} href={item.link} className="flex space-x-3 border p-3 rounded w-80 min-w-[300px] shadow-sm">
@@ -202,6 +244,16 @@ function ProductDetailsSec() {
                     </div>
                 </div>
                 </div>
+
+                {/* You may also like start */}
+
+                <div className="similarProduct">
+                    <h3 > You may also like </h3>
+                    
+
+                </div>
+
+
             </div>
         </div>
     </div>

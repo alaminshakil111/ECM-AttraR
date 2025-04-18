@@ -13,7 +13,8 @@ import fabrilifeappstore from "../assets/images/fabrilifeappstore.svg";
 import selectingImage from "../assets/images/selectingImage.png";
 
 
-import NewPriceItemCard from '../components/NewPriceItemCard';
+// import NewPriceItemCard from '../components/NewPriceItemCard';
+import NewNameItemSec from '../components/NewNameItemSec';
 import FrontImgCardSec from '../components/FrontImgCardSec'
 import FullSleeveShirt from '../components/FullSleeveShirt'
 import JacketSec from '../components/JacketSec';
@@ -22,7 +23,6 @@ import ProductExplain from '../components/FeatureProduction';
 // import HelpContactSec from '../components/HelpContactSec';
 // import Footermain from '../components/Footermain';
 // import SubFooterSec from '../components/subFooter';
-
 
 
 import { Link } from "react-router-dom";
@@ -87,7 +87,7 @@ const Home = () => {
                         <a href="/" className="underline text-center flex justify-center items-center text-"> visit store <IoIosArrowForward /> </a>
                     </div>
                     <div className="ItemsBoxApp">
-                        <NewPriceItemCard />
+                        <NewNameItemSec />
                     </div>
                 </div>
             </div>

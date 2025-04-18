@@ -22,6 +22,7 @@ import HiringDeveloper from "./pages/HiringDeveloper";
 import Testimonials from "./pages/Testimonials";
 import Products from "./pages/Products";
 import ProductDetailsSec from "./pages/ProductDetails";
+import CheckOutSec from "./pages/CheckOut";
 import NotFound from "./pages/NotFound";
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/Products" element={<Products />} />
         <Route path="/ProductDetails" element={<ProductDetailsSec />} />
+        <Route path="/CheckOut" element={<CheckOutSec />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 
