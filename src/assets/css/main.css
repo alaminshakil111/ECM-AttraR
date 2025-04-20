@@ -234,4 +234,8 @@ img {
     border-top-left-radius: 5px !important;
     border-bottom-left-radius: 5px !important;
   }
+}
+
+.shippingInfo > div {
+  margin-bottom: 16px;
 }/*# sourceMappingURL=main.css.map */
