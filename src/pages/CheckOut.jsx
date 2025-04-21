@@ -5,9 +5,31 @@ import React, { useState } from "react";
 import cardpay from '../assets/images/cardpay.png';
 import cashDelivery from '../assets/images/cashDelivery.png';
 import checkbkash from '../assets/images/checkbkash.jpg';
+import indeximg1 from '../assets/images/indeximg1.jpg';
+import indeximg2 from '../assets/images/indeximg2.jpg';
 
 
 function CheckOutSec() {
+    const overViewArray =[
+    {
+        image: indeximg1,
+        title: "It's a demo T-shirt",
+        oldPrice: 850,
+        quantity: 1,
+        Price: 649
+    },
+    {
+        image: indeximg2,
+        title: "It's a demo T-shirt 2 ",
+        oldPrice: 850,
+        quantity: 1,
+        Price: 649
+    },
+
+
+
+    ];
+
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -54,7 +76,7 @@ function CheckOutSec() {
     return (
         <div className='checkOutSec'>
             <div className='container px-2 py-2 sm:px-0 '>
-                <div className='wrapper grid grid-cols-1 md:grid-cols-2 '>
+                <div className='wrapper grid md:gap-2 grid-cols-1 md:grid-cols-2 '>
                     <div className=' w-full '>
                         <h2 className=" text-center text-2xl font-bold " > Checkout Info  </h2>
 
@@ -240,22 +262,31 @@ function CheckOutSec() {
                                 of Sitename.
                                 </span>
                             </div>
+                            <div className="mt-6 text-[14px] ">
+                                <button type="submit" className="text-[14px] p-1 bg-amber-800 hover:bg-amber-700 cursor-pointer text-white w-full rounded-[4px] " > Confirm Order </button>
+                            </div>
                         </div>
 
-
-                    </div>
-                    <div className=' w-full '>
-                        <h1> 2 </h1>
                     </div>
 
+
+                    <div className=' w-full  '>
+                        <div className=" bg-yellow-50 px-3 pt-8 pb-3 mt-5 rounded-[5px] ">
+                            <div className="flex justify-between pb-3 border-b-1 border-b-neutral-400 ">
+                                <h5> Cart Overview </h5>
+                                <a href="/" className="text-[13px] text-amber-700 font-bold underline " > Modify Order </a>
+                            </div>
+                            <div className="  " >
+                                
+                            </div>
+
+                        </div> 
+
+                       
+                    </div>
 
                 </div>
-
-
-
-
             </div>
-
         </div>
     );
 }
