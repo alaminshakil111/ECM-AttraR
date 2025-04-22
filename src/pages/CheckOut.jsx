@@ -8,19 +8,22 @@ import checkbkash from '../assets/images/checkbkash.jpg';
 import indeximg1 from '../assets/images/indeximg1.jpg';
 import indeximg2 from '../assets/images/indeximg2.jpg';
 
+// import Component
+import ProductExplain from '../components/FeatureProduction';
+
 
 function CheckOutSec() {
     const overViewArray =[
     {
         image: indeximg1,
-        title: "It's a demo T-shirt",
+        title: "It's a demo T-shirt It's a demo T-shirt ",
         oldPrice: 850,
         quantity: 1,
         Price: 649
     },
     {
         image: indeximg2,
-        title: "It's a demo T-shirt 2 ",
+        title: "It's a demo T-shirt 2 It's a demo T-shirt ",
         oldPrice: 850,
         quantity: 1,
         Price: 649
@@ -157,7 +160,7 @@ function CheckOutSec() {
                                 <div>
                                     <input
                                     name="text"
-                                    placeholder="note for sitename"
+                                    placeholder="note for sitename (optional)"
                                     onChange={handleChange}
                                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" ></input>
                                 </div>
@@ -247,19 +250,19 @@ function CheckOutSec() {
                                 id="agreeTerms"
                                 />
                                 <span className="text-sm font-[cursive]">
-                                I agree to{" "}
-                                <a href="#" target="_blank" className="text-blue-600 underline">
-                                    Terms & Conditions
-                                </a>
-                                ,{" "}
-                                <a href="#" target="_blank" className="text-blue-600 underline">
-                                    Refund Policy
-                                </a>{" "}
-                                and{" "}
-                                <a href="#" target="_blank" className="text-blue-600 underline">
-                                    Privacy Policy
-                                </a>{" "}
-                                of Sitename.
+                                    I agree to{" "}
+                                    <a href="#" target="_blank" className="text-blue-600 underline">
+                                        Terms & Conditions
+                                    </a>
+                                    ,{" "}
+                                    <a href="#" target="_blank" className="text-blue-600 underline">
+                                        Refund Policy
+                                    </a>{" "}
+                                    and{" "}
+                                    <a href="#" target="_blank" className="text-blue-600 underline">
+                                        Privacy Policy
+                                    </a>{" "}
+                                    of Sitename.
                                 </span>
                             </div>
                             <div className="mt-6 text-[14px] ">
@@ -271,15 +274,45 @@ function CheckOutSec() {
 
 
                     <div className=' w-full  '>
-                        <div className=" bg-yellow-50 px-3 pt-8 pb-3 mt-5 rounded-[5px] ">
-                            <div className="flex justify-between pb-3 border-b-1 border-b-neutral-400 ">
+                        <div className=" bg-[#F3F3F3] px-3 pt-8 pb-3 mt-5 rounded-[5px] ">
+                            <div className="flex justify-between pb-3 ">
                                 <h5> Cart Overview </h5>
                                 <a href="/" className="text-[13px] text-amber-700 font-bold underline " > Modify Order </a>
                             </div>
-                            <div className="  " >
-                                
-                            </div>
+                            <div className="overViewProduct border-b-1 border-b-neutral-400 border-t-1 border-t-neutral-400 " >
+                                {
+                                    overViewArray.map((ProductE, index) => (
+                                        <div key={index} >
+                                            <p className="text-[13px]  "  > {ProductE.title} </p>
+                                            <div className=" flex items-center justify-between mb-5 " >
+                                                <img src= {ProductE.image}  alt= {indeximg1} className=" !h-[100px] " />
+                                                <p className="pl-2 " > 
+                                                    <span> {ProductE.quantity} &nbsp; </span>
+                                                    <span> X </span>
+                                                    <span> <strike> ৳ {ProductE.oldPrice} </strike> </span>
+                                                    <span> &nbsp; ৳ {ProductE.Price} </span>
+                                                </p>
+                                            </div>
+                                        </div>
 
+                                    ))
+                                }
+
+                            </div>
+                            <div className="overViewAmount">
+                                <div className="totalProductAmount pt-2 mt-4 flex justify-between items-center ">
+                                    <h5> Total </h5>
+                                    <span> ৳ 1198  </span>
+                                </div>
+                                <div className="shippingOverView flex justify-between items-center ">
+                                    <h5> Shipping (+) </h5>
+                                    <span>  ৳ 60  </span>
+                                </div>
+                                <div className="paybleOverView flex justify-between items-center border-t-1 border-t-neutral-400 ">
+                                    <h5> Payable </h5>
+                                    <span> ৳ 2118 </span>
+                                </div>
+                            </div>
                         </div> 
 
                        
@@ -287,6 +320,19 @@ function CheckOutSec() {
 
                 </div>
             </div>
+            <div className="OuterContainerExplain bg-white ">
+                <div className="container px-2 sm:px-0">
+                    <div className="wrapper">
+                        <ProductExplain />
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
         </div>
     );
 }
