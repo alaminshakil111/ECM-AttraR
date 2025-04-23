@@ -10,7 +10,6 @@ import HelpContactSec from './components/HelpContactSec';
 import Footermain from './components/Footermain';
 import SubFooterSec from './components/subFooter';
 
-
 // All Pages
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -23,6 +22,7 @@ import Testimonials from "./pages/Testimonials";
 import Products from "./pages/Products";
 import ProductDetailsSec from "./pages/ProductDetails";
 import CheckOutSec from "./pages/CheckOut";
+import CartSec from "./pages/Cart";
 import NotFound from "./pages/NotFound";
 
 function App() {
@@ -43,6 +43,7 @@ function App() {
         <Route path="/Products" element={<Products />} />
         <Route path="/ProductDetails" element={<ProductDetailsSec />} />
         <Route path="/CheckOut" element={<CheckOutSec />} />
+        <Route path="/Cart" element={<CartSec />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 

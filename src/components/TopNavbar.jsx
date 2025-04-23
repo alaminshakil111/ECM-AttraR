@@ -52,7 +52,7 @@ const TopNavbar = () => {
                 </span>
               </div>
               <div className="addCartNav cursor-pointer hover:text-blue-600">
-                <IoMdCart />
+                <a href="/Cart"> <IoMdCart /> </a>
               </div>
               <div className="loginNav cursor-pointer hover:text-blue-600">
                 <span onClick={toggleLogin} > <CiLogin /> </span>
